@@ -14,3 +14,61 @@ cas=0
 h=0
 sn=0
 l=0
+print("Bienvenido, sistema liquidacion de sueldos")
+l=int(input("Nueva liquidacion? Marque 1"))
+while l==1:
+    c=int(input("Codigo de estado civil: marque 1 soltero - 2 casado con hijos - 3 casado sin hijos"))
+    while c<=3 and c>0:
+        if c==1:
+            n=input("Ingrese nombre y apellido del empleado")
+            s=float(input("Ingrese importe del sueldo bruto"))
+            os=s*3/100
+            j=s*11/100
+            sn=s-os-j
+            print("Empleado:",n)
+            print("Sueldo Neto: $",sn)
+            n=0
+            s=0
+            os=0
+            j=0
+            s=0
+            sn=0
+            c=0
+            l=int(input("Nueva liquidacion? Marque 1"))
+        elif c==2:
+            n=input("Ingrese nombre y apellido del empleado")
+            s=float(input("Ingrese importe del sueldo bruto"))
+            os=s*3/100
+            j=s*11/100
+            sn=s-os-j+500+900
+            print("Empleado:",n)
+            print("Sueldo Neto: $",sn)
+            n=0
+            s=0
+            os=0
+            j=0
+            s=0
+            sn=0
+            c=0
+            l=int(input("Nueva liquidacion? Marque 1"))
+        elif c==3:
+            n=input("Ingrese nombre y apellido del empleado")
+            s=float(input("Ingrese importe del sueldo bruto"))
+            os=s*3/100
+            j=s*11/100
+            sn=s-os-j+500
+            print("Empleado:",n)
+            print("Sueldo Neto: $",sn)
+            n=0
+            s=0
+            os=0
+            j=0
+            s=0
+            sn=0
+            c=0
+            l=int(input("Nueva liquidacion? Marque 1"))
+        else:
+            print("error, vuelva a comenzar")
+else:
+    print("Hasta luego")
+
